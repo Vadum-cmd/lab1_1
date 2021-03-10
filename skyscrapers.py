@@ -1,10 +1,10 @@
-#This module represents skyscrapers game.
-
+"""
+This module represents skyscrapers game.
+"""
 def read_input(path: str):
     """
     Read game board file from path.
     Return list of str.
-
     """
     input_data = []
     with open(path, mode='r', encoding='UTF-8') as check:
@@ -27,7 +27,6 @@ def left_to_right_check(input_line: str, pivot: int):
     >>> left_to_right_check("452453*", 5)
     False
     """
-
     row = input_line[1:-1]
     max_height = row[0]
     count = 1
@@ -40,6 +39,7 @@ def left_to_right_check(input_line: str, pivot: int):
         return False
     else:
         return True
+
 
 def check_not_finished_board(board: list):
     """
@@ -62,6 +62,7 @@ def check_not_finished_board(board: list):
 
     return True
 
+
 def check_uniqueness_in_rows(board: list):
     """
     Check buildings of unique height in each row.
@@ -75,7 +76,6 @@ def check_uniqueness_in_rows(board: list):
     >>> check_uniqueness_in_rows(['***21**', '412453*', '423145*', '*553215', '*35214*', '*41532*', '*2*1***'])
     False
     """
-
     town_board = board[1:-1]
     length = len(town_board[0]) - 2
     for item in town_board:
@@ -84,6 +84,7 @@ def check_uniqueness_in_rows(board: list):
             return False
 
     return True
+
 
 def check_horizontal_visibility(board: list):
     """
@@ -115,6 +116,7 @@ def check_horizontal_visibility(board: list):
                 return False
     return True
 
+
 def check_columns(board: list):
     """
     Check column-wise compliance of the board for uniqueness (buildings of unique height) and visibility (top-bottom and vice versa).
@@ -144,6 +146,7 @@ def check_columns(board: list):
         return False
 
     return True
+
 
 def check_skyscrapers(input_path: str):
     """
@@ -178,6 +181,7 @@ def check_skyscrapers(input_path: str):
 
     print ("Congrats! Your combination is compliant with requirements")
     return True
+
 
 if __name__ == "__main__":
     print(check_skyscrapers("check.txt"))
