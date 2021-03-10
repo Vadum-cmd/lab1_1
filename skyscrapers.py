@@ -186,8 +186,6 @@ def check_skyscrapers(input_path: str):
     return True
 
 
-# Just added a comment so I could commit changes.
-# And one more.
 if __name__ == "__main__":
     print(check_skyscrapers('check.txt'))
     print(check_skyscrapers('check_fail.txt'))
