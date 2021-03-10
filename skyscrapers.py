@@ -7,6 +7,7 @@ def read_input(path: str):
     Return list of str.
     """
     input_data = []
+
     with open(path, mode='r', encoding='UTF-8') as check:
         for row in check:
             input_data.append(row.strip("\n"))
@@ -162,6 +163,7 @@ def check_skyscrapers(input_path: str):
     print ("Data from your board : ")
     print (board_data)
     check_result = "Combination on board does not look good : "
+
     if not check_not_finished_board(board_data):
         check_result = check_result + " There are not finished cells"
         print (check_result)
@@ -184,4 +186,5 @@ def check_skyscrapers(input_path: str):
 
 
 if __name__ == "__main__":
-    print(check_skyscrapers("check.txt"))
+    print(check_skyscrapers('check.txt'))
+    print(check_skyscrapers('check_fail.txt'))
