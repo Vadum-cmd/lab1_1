@@ -1,5 +1,6 @@
 """
 This module represents skyscrapers game.
+Almost forgot GitHub link: https://github.com/Vadum-cmd/lab1_1
 """
 def read_input(path: str):
     """
